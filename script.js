@@ -24,7 +24,7 @@ let GameBoard = (function () {
             cellText.textContent = "";
         })
         console.log(gameBoard);
-        board.style.display="none";
+        board.style.display = "none";
         displayGameBoard();
     }
     function checkRow() {
@@ -34,10 +34,10 @@ let GameBoard = (function () {
             (gameBoard[3] != undefined && gameBoard[3] == gameBoard[4] && gameBoard[4] == gameBoard[5])
             ||
             (gameBoard[6] != undefined && gameBoard[6] == gameBoard[7] && gameBoard[7] == gameBoard[8])) {
-            console.log("Check row is "+ true);
+            console.log("Check row is " + true);
             return true;
         } else {
-            console.log("Check row is "+ false);
+            console.log("Check row is " + false);
 
             return false;
         }
@@ -51,11 +51,11 @@ let GameBoard = (function () {
             (gameBoard[2] != undefined && gameBoard[2] == gameBoard[5] && gameBoard[1] == gameBoard[8])
 
         ) {
-            console.log("Check column is "+ true);
+            console.log("Check column is " + true);
 
             return true;
         } else {
-            console.log("Check Column is "+ false);
+            console.log("Check Column is " + false);
 
             return false;
         }
@@ -63,31 +63,49 @@ let GameBoard = (function () {
     }
     function checkDiagonal() {
         if (gameBoard[0] != undefined && gameBoard[0] == gameBoard[4] == gameBoard[8]) {
-            console.log("Check diagonal is "+ true);
+            console.log("Check diagonal is " + true);
 
             return true;
 
         } else {
-            console.log("Check diagonal is "+ false);
+            console.log("Check diagonal is " + false);
 
             return false;
         }
 
     }
 
+    function checkTie() {
+        if (gameBoard[0] != undefined && gameBoard[1] != undefined && gameBoard[2] != undefined
+            &&
+            gameBoard[3] != undefined && gameBoard[4] != undefined && gameBoard[5] != undefined
+            &&
+            gameBoard[6] != undefined && gameBoard[7] != undefined && gameBoard[8] != undefined
+        ) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     function winner(win) {
-       if (checkRow()
+        if (checkRow()
             ||
             checkColumn()
             ||
             checkDiagonal()
 
         ) {
-            console.log(true);
-            startAgainBtn.style.display="block";
-            winnerText.style.display="block";
+            startAgainBtn.style.display = "block";
+            winnerText.style.display = "block";
             winnerText.textContent = `${win} The winner`;
             resetGameBoard();
+        } else if (checkTie()) {
+            startAgainBtn.style.display = "block";
+            winnerText.style.display = "block";
+            winnerText.textContent = `It's a Tie!`;
+            resetGameBoard();
+
         }
     }
 
@@ -115,10 +133,10 @@ let GameBoard = (function () {
         })
     })
 
-    startAgainBtn.addEventListener("click",()=>{
-        board.style.display="grid";
-        startAgainBtn.style.display="none";
-        winnerText.style.display="none";
+    startAgainBtn.addEventListener("click", () => {
+        board.style.display = "grid";
+        startAgainBtn.style.display = "none";
+        winnerText.style.display = "none";
     })
 
 
