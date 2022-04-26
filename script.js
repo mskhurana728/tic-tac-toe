@@ -5,7 +5,6 @@ let GameBoard = (function () {
     const board = document.querySelector(".gameBoard");
     const startAgainBtn = document.querySelector(".startAgainBtn");
     let gameBoard = [];
-
     let player = "";
 
     function displayGameBoard() {
@@ -25,6 +24,7 @@ let GameBoard = (function () {
         })
         console.log(gameBoard);
         board.style.display = "none";
+        player="";
         displayGameBoard();
     }
     function checkRow() {
@@ -62,7 +62,9 @@ let GameBoard = (function () {
 
     }
     function checkDiagonal() {
-        if (gameBoard[0] != undefined && gameBoard[0] == gameBoard[4] == gameBoard[8]) {
+        if (gameBoard[0] != undefined && gameBoard[0] == gameBoard[4] && gameBoard[0]== gameBoard[8]
+            ||
+            (gameBoard[2] != undefined && gameBoard[2] == gameBoard[4] && gameBoard[2]== gameBoard[6])) {
             console.log("Check diagonal is " + true);
 
             return true;
