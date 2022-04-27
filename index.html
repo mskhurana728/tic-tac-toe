@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,53 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
+
 <body>
+    <div class="header">
+        <h1>TIC-TAC-TOE</h1>
+    </div>
+    <div class="playerInfo">
+        <div class="playerName">
+
+            <form action="">
+                <label for="player1">Player1</label>
+                <input type="text" id="player1">
+                <label for="player2">Player2</label>
+                <input type="text" id="player2">
+            </div>
+                <button type="submit"class="startBtn">Start</button>
+            </form>
+
+    </div>
 
     <div class="gameBoard">
-        <div class="cell"><div class="cellText" data-cell="0"></div></div>
-        <div class="cell"><div class="cellText" data-cell="1"></div></div>
-        <div class="cell"><div class="cellText" data-cell="2"></div></div>
-        <div class="cell"><div class="cellText" data-cell="3"></div></div>
-        <div class="cell"><div class="cellText" data-cell="4"></div></div>
-        <div class="cell"><div class="cellText" data-cell="5"></div></div>
-        <div class="cell"><div class="cellText" data-cell="6"></div></div>
-        <div class="cell"><div class="cellText" data-cell="7"></div></div>
-        <div class="cell"><div class="cellText" data-cell="8"></div></div>
+        <div class="cell">
+            <div class="cellText" data-cell="0"></div>
+        </div>
+        <div class="cell">
+            <div class="cellText" data-cell="1"></div>
+        </div>
+        <div class="cell">
+            <div class="cellText" data-cell="2"></div>
+        </div>
+        <div class="cell">
+            <div class="cellText" data-cell="3"></div>
+        </div>
+        <div class="cell">
+            <div class="cellText" data-cell="4"></div>
+        </div>
+        <div class="cell">
+            <div class="cellText" data-cell="5"></div>
+        </div>
+        <div class="cell">
+            <div class="cellText" data-cell="6"></div>
+        </div>
+        <div class="cell">
+            <div class="cellText" data-cell="7"></div>
+        </div>
+        <div class="cell">
+            <div class="cellText" data-cell="8"></div>
+        </div>
     </div>
     <div class="winnerDiv">
         <p class="winnerText"></p>
@@ -27,4 +63,5 @@
 
     </div>
 </body>
+
 </html>

@@ -1,8 +1,8 @@
 
 .gameBoard{
-    height: 100vh;
+    height: 70vh;
     width: 100vw;
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3,auto);
     place-content: center;
     gap: .2rem;
@@ -48,4 +48,24 @@ cursor: pointer;
 .startAgainBtn,
 .winnerText{
     display: none;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.playerInfo{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1rem;
+}
+.winnerDiv{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    font-size: 2rem;
+    font-weight: bold;
 }
